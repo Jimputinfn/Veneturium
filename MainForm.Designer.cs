@@ -47,11 +47,11 @@
             tabStripAdd = new Controls.BrowserTabStrip.BrowserTabStripItem();
             PanelStatus = new System.Windows.Forms.Panel();
             PanelSearch = new System.Windows.Forms.Panel();
+            progressBar1 = new System.Windows.Forms.ProgressBar();
             BtnNextSearch = new System.Windows.Forms.Button();
             BtnPrevSearch = new System.Windows.Forms.Button();
             BtnCloseSearch = new System.Windows.Forms.Button();
             TxtSearch = new System.Windows.Forms.TextBox();
-            progressBar1 = new System.Windows.Forms.ProgressBar();
             menuStripTab.SuspendLayout();
             PanelToolbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)TabPages).BeginInit();
@@ -211,7 +211,7 @@
             TabPages.Name = "TabPages";
             TabPages.Padding = new System.Windows.Forms.Padding(1, 29, 1, 1);
             TabPages.SelectedItem = tabStrip1;
-            TabPages.Size = new System.Drawing.Size(934, 621);
+            TabPages.Size = new System.Drawing.Size(934, 641);
             TabPages.TabIndex = 4;
             TabPages.Text = "faTabStrip1";
             TabPages.TabStripItemSelectionChanged += OnTabsChanged;
@@ -225,7 +225,7 @@
             tabStrip1.Location = new System.Drawing.Point(1, 29);
             tabStrip1.Name = "tabStrip1";
             tabStrip1.Selected = true;
-            tabStrip1.Size = new System.Drawing.Size(932, 591);
+            tabStrip1.Size = new System.Drawing.Size(932, 611);
             tabStrip1.TabIndex = 0;
             tabStrip1.Title = "Loading...";
             tabStrip1.Changed += tabStrip1_Changed;
@@ -244,9 +244,9 @@
             // PanelStatus
             // 
             PanelStatus.Dock = System.Windows.Forms.DockStyle.Bottom;
-            PanelStatus.Location = new System.Drawing.Point(0, 651);
+            PanelStatus.Location = new System.Drawing.Point(0, 671);
             PanelStatus.Name = "PanelStatus";
-            PanelStatus.Size = new System.Drawing.Size(934, 20);
+            PanelStatus.Size = new System.Drawing.Size(934, 0);
             PanelStatus.TabIndex = 8;
             // 
             // PanelSearch
@@ -264,6 +264,13 @@
             PanelSearch.Size = new System.Drawing.Size(307, 40);
             PanelSearch.TabIndex = 9;
             PanelSearch.Visible = false;
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new System.Drawing.Point(190, -1);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new System.Drawing.Size(10, 40);
+            progressBar1.TabIndex = 10;
             // 
             // BtnNextSearch
             // 
@@ -323,13 +330,6 @@
             TxtSearch.TabIndex = 6;
             TxtSearch.TextChanged += TxtSearch_TextChanged;
             TxtSearch.KeyDown += TxtSearch_KeyDown;
-            // 
-            // progressBar1
-            // 
-            progressBar1.Location = new System.Drawing.Point(190, -1);
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new System.Drawing.Size(10, 40);
-            progressBar1.TabIndex = 10;
             // 
             // MainForm
             // 
