@@ -47,7 +47,6 @@
             tabStripAdd = new Controls.BrowserTabStrip.BrowserTabStripItem();
             PanelStatus = new System.Windows.Forms.Panel();
             PanelSearch = new System.Windows.Forms.Panel();
-            progressBar1 = new System.Windows.Forms.ProgressBar();
             BtnNextSearch = new System.Windows.Forms.Button();
             BtnPrevSearch = new System.Windows.Forms.Button();
             BtnCloseSearch = new System.Windows.Forms.Button();
@@ -85,7 +84,7 @@
             // 
             BtnRefresh.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             BtnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            BtnRefresh.ForeColor = System.Drawing.Color.White;
+            BtnRefresh.ForeColor = System.Drawing.Color.Black;
             BtnRefresh.Image = (System.Drawing.Image)resources.GetObject("BtnRefresh.Image");
             BtnRefresh.Location = new System.Drawing.Point(878, 0);
             BtnRefresh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -112,7 +111,7 @@
             // BtnForward
             // 
             BtnForward.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            BtnForward.ForeColor = System.Drawing.Color.White;
+            BtnForward.ForeColor = System.Drawing.Color.Black;
             BtnForward.Image = (System.Drawing.Image)resources.GetObject("BtnForward.Image");
             BtnForward.Location = new System.Drawing.Point(29, 0);
             BtnForward.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -125,7 +124,7 @@
             // BtnBack
             // 
             BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            BtnBack.ForeColor = System.Drawing.Color.White;
+            BtnBack.ForeColor = System.Drawing.Color.Black;
             BtnBack.Image = (System.Drawing.Image)resources.GetObject("BtnBack.Image");
             BtnBack.Location = new System.Drawing.Point(2, 0);
             BtnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -144,7 +143,7 @@
             // 
             BtnDownloads.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             BtnDownloads.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            BtnDownloads.ForeColor = System.Drawing.Color.White;
+            BtnDownloads.ForeColor = System.Drawing.Color.Black;
             BtnDownloads.Image = (System.Drawing.Image)resources.GetObject("BtnDownloads.Image");
             BtnDownloads.Location = new System.Drawing.Point(906, 0);
             BtnDownloads.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -158,12 +157,14 @@
             // TxtURL
             // 
             TxtURL.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            TxtURL.BackColor = System.Drawing.Color.Black;
             TxtURL.BorderStyle = System.Windows.Forms.BorderStyle.None;
             TxtURL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            TxtURL.Location = new System.Drawing.Point(60, 5);
+            TxtURL.ForeColor = System.Drawing.SystemColors.Info;
+            TxtURL.Location = new System.Drawing.Point(60, 4);
             TxtURL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             TxtURL.Name = "TxtURL";
-            TxtURL.Size = new System.Drawing.Size(812, 22);
+            TxtURL.Size = new System.Drawing.Size(781, 22);
             TxtURL.TabIndex = 5;
             TxtURL.Click += txtUrl_Click;
             TxtURL.TextChanged += txtUrl_TextChanged;
@@ -171,7 +172,7 @@
             // 
             // PanelToolbar
             // 
-            PanelToolbar.BackColor = System.Drawing.Color.White;
+            PanelToolbar.BackColor = System.Drawing.Color.Black;
             PanelToolbar.Controls.Add(BtnHome);
             PanelToolbar.Controls.Add(TxtURL);
             PanelToolbar.Controls.Add(BtnDownloads);
@@ -190,8 +191,7 @@
             // 
             BtnHome.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             BtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            BtnHome.ForeColor = System.Drawing.Color.White;
-            BtnHome.Image = (System.Drawing.Image)resources.GetObject("BtnHome.Image");
+            BtnHome.ForeColor = System.Drawing.Color.Black;
             BtnHome.Location = new System.Drawing.Point(847, 0);
             BtnHome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             BtnHome.Name = "BtnHome";
@@ -203,6 +203,7 @@
             // 
             // TabPages
             // 
+            TabPages.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             TabPages.ContextMenuStrip = menuStripTab;
             TabPages.Dock = System.Windows.Forms.DockStyle.Fill;
             TabPages.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -252,9 +253,8 @@
             // PanelSearch
             // 
             PanelSearch.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            PanelSearch.BackColor = System.Drawing.Color.White;
+            PanelSearch.BackColor = System.Drawing.Color.Black;
             PanelSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            PanelSearch.Controls.Add(progressBar1);
             PanelSearch.Controls.Add(BtnNextSearch);
             PanelSearch.Controls.Add(BtnPrevSearch);
             PanelSearch.Controls.Add(BtnCloseSearch);
@@ -265,18 +265,11 @@
             PanelSearch.TabIndex = 9;
             PanelSearch.Visible = false;
             // 
-            // progressBar1
-            // 
-            progressBar1.Location = new System.Drawing.Point(190, -1);
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new System.Drawing.Size(10, 40);
-            progressBar1.TabIndex = 10;
-            // 
             // BtnNextSearch
             // 
             BtnNextSearch.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             BtnNextSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            BtnNextSearch.ForeColor = System.Drawing.Color.White;
+            BtnNextSearch.ForeColor = System.Drawing.Color.Black;
             BtnNextSearch.Image = (System.Drawing.Image)resources.GetObject("BtnNextSearch.Image");
             BtnNextSearch.Location = new System.Drawing.Point(239, 4);
             BtnNextSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -290,9 +283,9 @@
             // BtnPrevSearch
             // 
             BtnPrevSearch.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            BtnPrevSearch.BackColor = System.Drawing.Color.White;
+            BtnPrevSearch.BackColor = System.Drawing.Color.Black;
             BtnPrevSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            BtnPrevSearch.ForeColor = System.Drawing.Color.White;
+            BtnPrevSearch.ForeColor = System.Drawing.Color.Black;
             BtnPrevSearch.Image = (System.Drawing.Image)resources.GetObject("BtnPrevSearch.Image");
             BtnPrevSearch.Location = new System.Drawing.Point(206, 4);
             BtnPrevSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -307,7 +300,7 @@
             // 
             BtnCloseSearch.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             BtnCloseSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            BtnCloseSearch.ForeColor = System.Drawing.Color.White;
+            BtnCloseSearch.ForeColor = System.Drawing.Color.Black;
             BtnCloseSearch.Image = (System.Drawing.Image)resources.GetObject("BtnCloseSearch.Image");
             BtnCloseSearch.Location = new System.Drawing.Point(272, 4);
             BtnCloseSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -380,7 +373,6 @@
         private System.Windows.Forms.Button BtnPrevSearch;
         private System.Windows.Forms.Button BtnNextSearch;
         private System.Windows.Forms.Button BtnHome;
-        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
