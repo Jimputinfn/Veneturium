@@ -13,7 +13,7 @@ namespace SharpBrowser.Browser {
 		public static string AcceptLanguage = "en-US,en;q=0.9";
 		public static string UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.36 /CefSharp Browser" + Cef.CefSharpVersion; // UserAgent to fix issue with Google account authentication		
 		public static string HomepageURL = "https://duckduckgo.com/";
-		public static string NewTabURL = "about:blank";
+		public static string NewTabURL = "https://duckduckgo.com";
 		public static string InternalURL = "veneturium";
 		public static string DownloadsURL = "veneturium://storage/downloads.html";
 		public static string FileNotFoundURL = "veneturium://storage/errors/notFound.html";
@@ -31,6 +31,7 @@ namespace SharpBrowser.Browser {
 		public static string ProxyUsername = "username";
 		public static string ProxyPassword = "pass";
 		public static string ProxyBypassList = "";
+
 
 	}
 }
