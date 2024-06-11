@@ -326,6 +326,7 @@
             // 
             // MainForm
             // 
+            AllowDrop = true;
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             ClientSize = new System.Drawing.Size(934, 671);
             Controls.Add(PanelSearch);
