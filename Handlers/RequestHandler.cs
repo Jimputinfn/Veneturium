@@ -9,59 +9,11 @@ namespace SharpBrowser
 {
     internal class RequestHandler : IRequestHandler
     {
-        MainForm myForm;
+        private readonly MainForm _mainForm;
 
         public RequestHandler(MainForm form)
         {
-            myForm = form;
-        }
-
-        public static class AdBlocker
-        {
-            public static List<string> AdUrlPatterns = new List<string> {
-                "*.doubleclick.net",
-                "*.ads.yahoo.com",
-                "*.googlesyndication.com",
-                "*.adserver",
-                "*.ads-api.twitter.com/",
-                "*.ads.facebook.com/",
-                "*.ads.youtube.com/",
-                "*.google.com/adsense/start/images/favicon.ico/",
-                "*.gstatic.com/adx/doubleclick.ico/",
-                "*.bannertrack.net/",
-                "*.adtrackers.net/",
-                "*.adnetasia.com/",
-                                "adclixx.net/",
-                "2mdn-cn.net",
-                 "2mdn.net",
-                  "admob-cn.com",
-                                  "doubleclick.net",
-
-                "admob.com",
-                "doubleclick-cn.net",
-                "adwordsexpress.com",
-                "google-analytics-cn.com",
-                "google-analytics.com",
-                "googleadapis.com",
-                "googleads-cn.com",
-                "googleads.com",
-                "googleadservices-cn.com",
-                "googleadservices.com",
-                "googleadsserving.cn",
-
-                "marketingplatform.google.com",
-                "googleadapis.com",
-                "googleadsserving.cn",
-                "000lex4.wcomhost.com",
-                "007.free-counters.co.uk",
-                "000lkub.rcomhost.com",
-                "01-prf-test-nym.ad.corp.appnexus.com",
-                "061-bgc-590.mktoresp.com",
-                "08.185.87.02.liveadvert.com",
-                "08.185.87.117.liveadvert.com",
-                "08.185.87.140.liveadvert.com",
-                // Add more ad patterns as needed
-            };
+            _mainForm = form ?? throw new ArgumentNullException(nameof(form));
         }
 
         public bool GetAuthCredentials(IWebBrowser chromiumWebBrowser, IBrowser browser, string originUrl, bool isProxy, string host, int port, string realm, string scheme, IAuthCallback callback)
@@ -113,7 +65,7 @@ namespace SharpBrowser
                 return null;
             }
 
-            return new ResourceRequestHandler(myForm);
+            return new ResourceRequestHandler(_mainForm);
         }
 
         public bool OnSelectClientCertificate(IWebBrowser chromiumWebBrowser, IBrowser browser, bool isProxy, string host, int port, X509Certificate2Collection certificates, ISelectClientCertificateCallback callback)
@@ -123,6 +75,59 @@ namespace SharpBrowser
 
         public void OnDocumentAvailableInMainFrame(IWebBrowser chromiumWebBrowser, IBrowser browser)
         {
+        }
+
+        // Nested class for AdBlocker
+        private static class AdBlocker
+        {
+            public static List<string> AdUrlPatterns = new List<string> {
+                "*.doubleclick.net",
+                "*.ads.yahoo.com",
+                "*.googlesyndication.com",
+                "*.adserver",
+                "*.ads-api.twitter.com/",
+                "*.ads.facebook.com/",
+                "*.ads.youtube.com/",
+                "*.google.com/adsense/start/images/favicon.ico/",
+                "*.gstatic.com/adx/doubleclick.ico/",
+                "*.bannertrack.net/",
+                "*.adtrackers.net/",
+                "*.adnetasia.com/",
+                "*.adclixx.net/",
+                "*.2mdn-cn.net",
+                "*.2mdn.net",
+                "*.admob-cn.com",
+                "*.doubleclick.net",
+                "*.admob.com",
+                "*.doubleclick-cn.net",
+                "*.adwordsexpress.com",
+                "*.google-analytics-cn.com",
+                "*.google-analytics.com",
+                "*.googleadapis.com",
+                "*.googleads-cn.com",
+                "*.googleads.com",
+                "*.googleadservices-cn.com",
+                "*.googleadservices.com",
+                "*.oogleadsserving.cn",
+                "*.marketingplatform.google.com",
+                "*.googleadapis.com",
+                "*.googleadsserving.cn",
+                "*.000lex4.wcomhost.com",
+                "*.007.free-counters.co.uk",
+                "*.000lkub.rcomhost.com",
+                "*.01-prf-test-nym.ad.corp.appnexus.com",
+                "*.061-bgc-590.mktoresp.com",
+                "*.08.185.87.02.liveadvert.com",
+                "*.08.185.87.117.liveadvert.com",
+                "*.08.185.87.140.liveadvert.com",
+                "*.mc.yandex.ru",
+                "*.counter.yadro.ru",
+                "*.pagead2.googleadservices.com",
+                "*.pagead2.googlesyndication.com",
+                "*.adservice.google.com",
+                "*.adservice.google.com",
+                // Add more ad patterns as needed
+            };
         }
     }
 }
