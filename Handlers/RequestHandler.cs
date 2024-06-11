@@ -35,6 +35,31 @@ namespace SharpBrowser
                 "2mdn-cn.net",
                  "2mdn.net",
                   "admob-cn.com",
+                                  "doubleclick.net",
+
+                "admob.com",
+                "doubleclick-cn.net",
+                "adwordsexpress.com",
+                "google-analytics-cn.com",
+                "google-analytics.com",
+                "googleadapis.com",
+                "googleads-cn.com",
+                "googleads.com",
+                "googleadservices-cn.com",
+                "googleadservices.com",
+                "googleadsserving.cn",
+
+                "marketingplatform.google.com",
+                "googleadapis.com",
+                "googleadsserving.cn",
+                "000lex4.wcomhost.com",
+                "007.free-counters.co.uk",
+                "000lkub.rcomhost.com",
+                "01-prf-test-nym.ad.corp.appnexus.com",
+                "061-bgc-590.mktoresp.com",
+                "08.185.87.02.liveadvert.com",
+                "08.185.87.117.liveadvert.com",
+                "08.185.87.140.liveadvert.com",
                 // Add more ad patterns as needed
             };
         }
