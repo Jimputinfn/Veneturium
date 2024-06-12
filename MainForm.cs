@@ -65,7 +65,7 @@ namespace SharpBrowser
         private void InitAppIcon()
         {
             assembly = Assembly.GetAssembly(typeof(MainForm));
-            Icon = new Icon(GetResourceStream("sharpbrowser.ico"), new Size(64, 64));
+
         }
 
         public static Assembly assembly = null;
